@@ -3,4 +3,4 @@
 require "./lib/Enviornment"
 
 
-Waves::CLI.new.call
+Scrapper.new.get_page
