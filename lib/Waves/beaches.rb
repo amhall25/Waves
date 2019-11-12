@@ -1,4 +1,4 @@
 class Beach
-  attr_accessor :name, :address
+  attr_accessor :name, :address, :rating
   
 end
