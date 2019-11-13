@@ -7,6 +7,6 @@ class Waves::CLI
   end
   
   def fetch
-    Scrapper.new.get_page(@zipcode)
+    API.new.get_page(@zipcode)
   end
 end
