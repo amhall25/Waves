@@ -4,8 +4,8 @@ class API
 
   
   def get_page(zipcode="90210")
-    
-    doc= Nokogiri::HTML(open("https://www.yelp.com/search?find_desc=beaches&find_loc=#{zipcode}&ns=1&cflt=beaches"))
+    url="https://api.yelp.com/v3/businesses/search?location=#{zipcode}&term=beaches"
+    doc= HTTParty.get(url)
     binding.pry
   end
 end
