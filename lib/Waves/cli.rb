@@ -1,6 +1,6 @@
 class Waves::CLI 
   def call
-    puts "welcome to Waves, enter the zip code you wish to know more about"
+    puts "Welcome to Waves, enter the zip code where you'd like a list of the closest beaches."
     
     @zipcode = gets.chomp
     fetch
