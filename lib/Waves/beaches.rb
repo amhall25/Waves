@@ -6,6 +6,7 @@ class Beach
     @name = name
     @address = address
     @rating = rating
+    @@all << self
   end
   
   def self.all

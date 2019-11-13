@@ -8,5 +8,11 @@ class Waves::CLI
   
   def fetch
     API.new.get_page(@zipcode)
+    
+    Beach.all.each do |beach|
+      puts beach.name
+    end
+    
   end
+  
 end
