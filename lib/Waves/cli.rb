@@ -3,7 +3,7 @@ class Waves::CLI
     puts "Welcome to Waves, enter the zip code where you'd like a list of the closest beaches."
     
     @zipcode = gets.chomp
-    until @zipcode.length == 5 
+    until @zipcode.length == 5 && @zipcode.to_i != 0
       puts "Please be sure to enter a 5 digit zipcode. Enter now."
       @zipcode = gets.chomp
     end
@@ -33,14 +33,21 @@ class Waves::CLI
     rating = Beach.all[i].rating
     puts "#{name} is located at #{address} and has a #{rating} out of 5 rating." 
     
-    puts "Press 1 to get more information about a beach at this zipcode. Press any other 
+    puts "Press 1 to get more information about a beach at this zipcode. Enter 2 to choose a new zipcode. Press any other 
     number to exit."
     
     option = gets.chomp
       if option.to_i == 1
         info
+      elsif option.to_i == 2
+       Beach.clear_all
+       call
+      else
+        puts "Goodbye, thank you for using Waves."
+        exit
       end
   end
-    
+  
+      
   
 end
