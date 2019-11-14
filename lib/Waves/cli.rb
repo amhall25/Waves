@@ -47,7 +47,4 @@ class Waves::CLI
         exit
       end
   end
-  
-      
-  
 end
